@@ -1,0 +1,37 @@
+<form id="rectangleForm">
+    <h1>Calculate the area of a room:</h1>
+    <div>
+        <label for="width">Width</label>
+        <input type="text" name="width" id="width" value="1.00" />
+    </div>
+    <div>
+        <label for="height">Height</label>
+        <input type="text" name="height" id="height" value="1.00" />
+    </div>
+    <div>
+        <label for="area">Area</label>
+        <input type="text" name="area" id="area" value="0.00" />
+    </div>
+    <div>
+        <input type="button" value="Calculate" id="submit" />
+    </div>
+</form>
+<script>
+    function rectangle() {
+        
+        var area;
+        var width = document.getElementById('width').value;
+        var height = document.getElementById('height').value;
+        var total = width * height;
+        document.getElementById('area').value = total;
+        return false;
+    }
+
+    function init() {
+        'use strict';
+        var submit = document.getElementById('submit');
+        submit.onclick = rectangle;
+    }
+
+    window.onload = init;
+</script>   
